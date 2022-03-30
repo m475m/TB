@@ -8,10 +8,14 @@ public class Lesson3Ex1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число");
         num = scanner.nextInt();
-        if (num > 0) {
+
+        if (!isPositive(num)) System.out.println("Число не является положительным");
+        else {
             System.out.println("Число является положительным");
-        } else {
-            System.out.println("Число не является положительным");
         }
+    }
+
+    public static boolean isPositive(int num) {
+        return num > 0;
     }
 }
